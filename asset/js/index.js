@@ -87,8 +87,8 @@ function New(){
     var fecha = new Date();
    
 	var ano = fecha.getFullYear();
-
-
+var diaTexto = fecha.toLocaleDateString();
+console.log(diaTexto)
 let message ="MiniStockEmprendedor"+diaTexto+"=";
   const password = "123647859MiniStock";
 
@@ -99,9 +99,6 @@ let message ="MiniStockEmprendedor"+diaTexto+"=";
 
 
 	let code=[encryptedMessage,generarCodigoContrato()];
-
-console.log(code)
-
 
 	let info = {
 			code:code,
@@ -141,12 +138,16 @@ console.log(code)
 
 Qrcode(code,nombreEmpresa,diaTexto,riff)
 
-}
+
+
+
+
+}/**cierre function**/
 
 /********************************/
 function Qrcode(code,name,date,riff){
 
-		let qrdata=code;
+	let qrdata=code;
 
         var qrcode = new QRCode("qrcodeuno", {
             text: JSON.stringify(qrdata),
@@ -163,8 +164,6 @@ function Qrcode(code,name,date,riff){
 		document.getElementById("nombre_de_la_empresa").innerHTML=name	
 		document.getElementById("fecha_de_la_empresa").innerHTML=date
 		document.getElementById("riff_de_la_empresa").innerHTML=riff
-
-
 
 
 }
@@ -209,15 +208,15 @@ function closeModal_qr() {
 
 	let containner_qr = document.getElementById("qrcodeuno")
 
-		while(containner_qr.hasChildNodes()){
-		 			
-		 	containner_qr.removeChild(containner_qr.firstChild);
+	while(containner_qr.hasChildNodes()){
+	 			
+	 	containner_qr.removeChild(containner_qr.firstChild);
 
-		}
+	}
 		
  	modal_qr.style.display = "none";
 
-			  containner_qr.innerHTML="";
+	containner_qr.innerHTML="";
 
 }
 
@@ -277,22 +276,22 @@ var fecha = new Date();
 
 			console.log(CONTRATO)
 			
-										// Convierte el div en una imagen utilizando html2canva1
-						html2canvas(document.getElementById("Contrato"), {scale:2, allowTaint: true, useCORS:true}).then(canvas => {
+    							// Convierte el div en una imagen utilizando html2canva1
+    			html2canvas(document.getElementById("Contrato"), {scale:2, allowTaint: true, useCORS:true}).then(canvas => {
 
-							// Obtiene la imagen en formato base64
-							const imgData = canvas.toDataURL('image/png');
+    				// Obtiene la imagen en formato base64
+    				const imgData = canvas.toDataURL('image/png');
 
-							// Crea un nuevo documento PDF
-							const pdf = new jsPDF('p', 'mm', 'a4');
+    				// Crea un nuevo documento PDF
+    				const pdf = new jsPDF('p', 'mm', 'a4');
 
-							// Agrega la imagen al documento PDF
-							pdf.addImage(imgData, 'PNG', 0, 0, 210, 297);
+    				// Agrega la imagen al documento PDF
+    				pdf.addImage(imgData, 'PNG', 0, 0, 210, 297);
 
-							// Guarda el documento PDF
-							pdf.save(diaTexto+'.pdf');
+    				// Guarda el documento PDF
+    				pdf.save(diaTexto+'.pdf');
 
-						});
+    			});
 
 			/*****
  html2canvas(document.getElementsByClassName("droppable-area")[0], { useCORS:true}).then(function (canvas){
