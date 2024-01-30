@@ -1,0 +1,100 @@
+<style type="text/css">
+
+body {
+    background: red;
+}
+.Title-qr{
+
+}
+
+.section-qr-1{
+	display: flex;
+	justify-content: space-between;
+}
+
+.section-qr-2 {
+    display: flex;
+    justify-content: center;
+    background: #f3f3f3;
+    padding: 20px;
+}
+.btn-qr-containner {
+    display: flex;
+    justify-content: center;
+    padding: 1px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-descargar-qr {
+    background: #1050FF;
+    color: white;
+    font-weight: bold;
+    padding: 8px;
+    width: 100%;
+    border-style: none;
+    font-size: 15px;
+}
+
+.modal-qr {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content-qr {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.qr_containner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #e5e5e5;
+}
+.close-qr {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-qr:hover,
+.close-qr:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+</style>
+<body>
+<div class="modal-content-qr">
+		<section  class="section-qr-1">
+				<h2 class="Title-qr">Qr code</h2>
+				<span id="close_Modal_qr" class="close-qr" onclick="closeModal_qr()">&times;</span>
+		</section>
+		<section class="section-qr-2">
+			<div id="qrcodeuno" class="qr_containner" title="[&quot;MiniStockEmprendedor2023=20241257708&quot;]">
+				<canvas width="200" height="200" style="display: none;"></canvas>
+				<img alt="Scan me!" src="Qrcode_25_1_2024.png" style="display: block;">
+				<h3 id="nombre_de_la_empresa" class="nombre-de-la-empreza">Nombre de la Empreza</h3>
+			</div>
+		</section>
+
+		<section class="btn-qr-containner">
+			<button class="btn-descargar-qr" onclick="descargar_qr()">Descargar</button>
+		</section>
+	</div>
+</body>
