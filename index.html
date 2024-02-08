@@ -4,22 +4,24 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
 	<meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
 	<link rel="stylesheet" href= "asset/style/index.css"></link>
+        <link rel="stylesheet" href= "asset/style/MediaQuery.css"></link>
 	<link rel="stylesheet" href="asset/mini-stock-v1.0/style.css">
+  
 	<title>Admin System MiniStock</title>
 </head>
 <body class="body">
 	<main class="containner-main">
-		<section class="containner-section1" id="containner_section1">
-				<img src="asset/image/Logo-MiniStock.png" class="image-section1" onclick="Login()">
+	     	<section class="containner-section1" id="containner_section1">
+		    <img src="asset/image/Logo-MiniStock.png" class="image-section1" onclick="Login()">
 		</section>
 		<section class="containner-data-form oculto"  id="containner_section2">
 			<header class="header">
 				<h1 class="header-title">MiniStock System</h1>
 			</header>
 			<form class="form-modal">		 	
-				<div class="containner-data1">
-						<h2 class="title-form1">Datos de la persona</h2>
-						<div class="containner-data1-info">
+				<div class="containner-data">
+						<h2 class="title-form">Datos de la persona</h2>
+						<div class="containner-data-info">
 							<label class="containner-label-modal nombre_containner"> 
 							  <label for="nombre">Nombre:</label>
 							  <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
@@ -50,11 +52,10 @@
 							  <input type="tel" id="telefono" name="telefono" placeholder="Telefono" required>
 							</label>
 						</div>
-					</div>
-			  	
-				  	<div class="containner-data2">
-				  		<h2 class="title-form2">Datos de la empresa</h2>
-				  		<div class="containner-data2-info">
+				</div>  
+				  <div class="containner-data">
+                                      <h2 class="title-form">Datos de la empresa</h2>
+				      <div class="containner-data-info">
 							<label class="containner-label-modal nombreEmpresa_containner">
 							 	 <label for="nombreEmpresa">Nombre de la empresa:</label>
 							  	<input type="text" id="nombreEmpresa" name="nombreEmpresa" placeholder="Nombre Empresa" required>
@@ -85,16 +86,16 @@
 								  <label for="telefono2">Teléfono 2 de la empresa:</label>
 								  <input type="tel" id="telefono2" placeholder ="telefono2" placeholder="telefono2" required>
 							</label>		
-					</div>
-					</div>
+				      </div>
+				 </div>
 
 			</form>
 			<div class="container-btn">
-			<button class="btn-action save-btn" onclick="New()">Save Data</button>
-			<button class="btn-action clear-btn" onclick="Clear_data_new_update()">clear Data</button>
-			<button class="btn-action Contrato-btn" onclick="call_contrato()">contract</button>
-			<!--<button class="btn-action Qr-btn" onclick="Qrcode()">Qr Generate</button>-->
-			</div></section>
+				<button class="btn-action save-btn" onclick="New()">Save Data</button>
+		       		 <button class="btn-action clear-btn" onclick="Clear_data_new_update()">clear Data</button>
+		       		 <button class="btn-action Contrato-btn" onclick="call_contrato()">contract</
+			</div>
+                </section>
 	</main>
 	<div id="modal_qr" class="modal-qr">
 		<div class="modal-content-qr">

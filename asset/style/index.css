@@ -1,8 +1,72 @@
+/***BASE******/
 *{
 margin:0px;
 padding:0px;
 
 }
+
+.containner-main{
+    background: #2e374e;
+}
+
+
+.containner-label-modal {
+    display: grid;
+    padding: 5px;
+}
+
+label{
+        font-weight: bold;
+}
+input{
+        height: 30px;
+}
+
+/*
+.oculto{
+  display: none;
+}
+*/
+/***BASE******/
+/*-----------CONTAINNER SECTION 1-----------*/
+.containner-section1 {
+    background: #2e374e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.image-section1 {
+    width: 300px;
+    border: 4.5px solid white;
+    border-radius: 197px;
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0092ff, 0 0 20px #e1d5df, 0 0 25px #0997ef;
+    padding: 15px;
+}
+
+
+
+.image-section-add-data{
+
+
+}
+.contain-data{
+        padding: 5px;
+        overflow: scroll-y;
+}
+/*-----------CONTANNER SECTION 1-----------*/
+/**********************************************/
+/*-----------CONTAINNER SECTION2-----------*
+/************CONTAINNER DATA FORM**************/
+.containner-data-form{
+
+
+
+
+}
+/*********HEADER***********/
 .header {
     background: #2e374e;
     padding: 10px;
@@ -15,357 +79,24 @@ padding:0px;
     font-size: 31px;
 }
 
-.containner-section1 {
-    background: #2e374e;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.oculto{
-  display: none;
-}
-
-.image-section1 {
-    width: 300px;
-    border: 4.5px solid white;
-    border-radius: 197px;
-    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0092ff, 0 0 20px #e1d5df, 0 0 25px #0997ef;
-    padding: 45px;
-}
-.containner-main{
-background: #ACACAC;
-
-}
-
-.image-section-add-data{
-
-
-}
-.contain-data{
-	padding: 5px;
-	overflow: scroll-y;
-}
-
-/****buscador**/
-.contain-search{
-	padding: 2px;
-	background:#26326D;
-	display: grid;
-	grid-template-columns:1fr 60px 60px;
-  	grid-template-rows: auto;
-
-
-}
-
-.containner-input-search {
-
-    display: flex;
-}
-
-
-
-
-.input-search {
-    width: 95%;
-    height: 26px;
-    border-style: none;
-    outline: none;
-    font-weight: bold;
-    text-indent: 9px;
-}
-
-.btn-reset {
-    border-style: none;
-    background: #ffffff;
-    width: 5%;
-}
-
-.btn-new{
-	border-style: none;
-	margin-left:  0.8px;
-}
-
-.btn-buscar{
-border-style: none;
-margin-left: 0.8px;
-
-}
-
-
-
-/****buscbuscarador**/
-
-
-/*************CONTAINNER DATA POST******************/
-.contain-data{
-	background: #8A8A8A;
-	display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-template-rows: auto;
-  grid-gap:5px;
-}
-
-
-
-.post {
-    display: grid;
-    grid-template-columns: repeat(3, 0.5fr);
-    grid-template-rows:310px;
-    grid-column-gap: 3px;
-    grid-row-gap: 3px;
-    padding: 4px;
-    overflow-y: scroll;
-    height: 75vh
-   
-}
-
-
-.info {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 3px;
-    grid-row-gap: 3px;
-    padding: 4px;
-    overflow-y: scroll;
-    height: 75vh
-   
-}
-
-
-
-
-
-.article-client-savend{
-
-	background: #5348BC;
-	padding:5px;
-	height: auto;
-
-}
-
-.img-article-client {
-    width: 100%;
-    height: 200px;
-}
-
-.article-title-client{
-	color: white;
-	font-size: 30px;
-
-}
-.containner-info-code{
-	color:white;
-
-}
-.label-code {
-    font-weight: bold;
-    font-size: 21px;
-}
-.containner-button{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-}
-
-.btn-action-article {
-    width: 100%;
-    padding: 6px;
-}
-/*************CONTAINNER DATA POST******************/
-/**********CONTAINNER INFO*****************/
-.container-info-section-client{
-
-	    background: #ffffff;
-	     padding: 18px;
-}
-.container-info-client {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows: auto;
-    grid-gap: 5px;
-    padding: 18px;
-}
-.containner-label {
-    margin-bottom: 6px;
-    display: grid;
-    padding: 6px;
-}
-
-.title-element-item {
-    font-size: 16px;
-    font-weight: bold;
-    margin-right: 5px;
-}
-
-
-.containner-btn-info{
-
-margin-top: 6px;
-display: flex;
-justify-content: space-around;
-
-}
-.btn-back-info {
-    width: 40%;
-    padding: 8px;
-    background: #0997ef;
-    color: aliceblue;
-    font-weight: bolder;
-    border-style: none;
-    margin-top: 4px;
-}
-.img-info-client{
-
-	width: 200px;
-
-
-
-}
-.container-imagenes-and-qr {
-    display: flex;
-    justify-content:space-between;
-
-}
-
-
-.container-imagenes-qr {
-    display: flex;
-    justify-content: center;
-    height: 188px;
-
-}
-
-.section-qr-info{
-
-}
-#qrcodeuno {
-    background: white;
-    padding: 10px;
-}
-.containner-imagen-select-info {
-    display: flex;
-    padding: 5px;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.containner-imagen-select-update-new{
-
-    display: flex;
-    padding: 5px;
-    align-items: center;
-    justify-content: space-around;
-    width: 80%;
-
-
-
-}
-
-.imagen-select {
-    width: 150px;
-    height: 150px;
-    object-fit: contain;
-}
-
-
-.btn-select-image {
-    padding: 20px;
-    border-radius: 11px;
-    color: white;
-    background: #0092ff;
-    font-weight: bold;
-}
-
-	.section-qr{
-
-	}
-/*******************************************************************/
-.footer{
-	background: #374D86;
-	padding: 15px;
-
-
-}
-
-footer{
-	display: flex;
-	justify-content: center;
-}
-.footer-select-number{
-color: white;
-margin-right: 5px;
-}
-
-.input-select-number{
-	width: 50px;
-}
-/*********NEW UPDATE CLIENT DATA*******************/
-.modal-form {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content-form {
-    background-color: #fefefe;
-    margin: 1% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-.close-form {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close-form:hover,
-.close-form:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-
-.content-title-modal {
-   
-    display: flex;
-    justify-content: space-between;
-}
-
-.title-modal{
-
-}
-
+/*********HEADER***********/
+/************DATA FORM******/
+/*
 .form-modal {
     display: flex;
-    height: 80vh;
+    height: 82vh;
     align-content: center;
     background: rgb(51, 102, 153);
     color:white;
 }
-.title-form1 {
+*/
+
+.title-form{
     text-align: center;
 }
 
-.title-form2 {
-    text-align: center;
-}
-
-
-.containner-data1{
+/*
+.containner-data{
 
 
     width: 50%;
@@ -376,14 +107,20 @@ margin-right: 5px;
 
 }
 
-.containner-data2 {
+.containner-data-info{
 
-    width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    background: red;
+    height: 80vh;
+
 }
 
+*/
+
+/************DATA FORM******/
+/************CONTAINNER DATA FORM**************/
+/******CONTAINNER BTN*****************/
 .container-btn {
     display: flex;
     flex-direction: row;
@@ -395,10 +132,9 @@ margin-right: 5px;
     padding: 5px;
     color: white;
     font-weight: bolder;
-    /* border-style: none; */
     width: 49%;
     height: 32px;
-    /* margin-right: auto; */
+
 }
 .save-btn {
     background: #20701b;
@@ -412,110 +148,33 @@ margin-right: 5px;
 .Contrato-btn {
     background: #5d3786;
 }
-.containner-label-modal {
-    display: grid;
-    padding: 5px;
-}
-label{
-	font-weight: bold;
-}
-input{
-	height: 30px;
-}
 
+/******CONTAINNER BTN*****************/
 
+/********FOOTER*****/
+.footer{
+        background: #374D86;
+        padding: 15px;
 
-
-
-
-
-
-/*********NEW UPDATE CLIENT DATA*******************/
-
-/***********************************************/
-/**********QR SECTION******************/
-.Title-qr{
 
 }
 
-.section-qr-1{
-	display: flex;
-	justify-content: space-between;
+footer{
+        display: flex;
+        justify-content: center;
 }
-
-.section-qr-2 {
-    display: flex;
-    justify-content: center;
-    background: #f3f3f3;
-    padding: 20px;
-}
-.btn-qr-containner {
-    display: flex;
-    justify-content: center;
-    padding: 1px;
-    width: 100%;
-    margin-top: 10px;
-}
-
-.btn-descargar-qr {
-    background: #1050FF;
+.footer-select-number{
     color: white;
-    font-weight: bold;
-    padding: 8px;
-    width: 100%;
-    border-style: none;
-    font-size: 15px;
+    margin-right: 5px;
 }
 
-.modal-qr {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
+.input-select-number{
+        width: 50px;
 }
-
-.modal-content-qr {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-.qr_containner {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background: #e5e5e5;
-}
-
-
-.nombre-de-la-empreza {
-    font-size: 37px;
-}
-
-
-.close-qr {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close-qr:hover,
-.close-qr:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-/*************************************************************/
+/********FOOTER*****/
+/*-----------CONTAINNER SECTION2-----------*/
+/****************************************************/
+/*-----------CONTAINNER CONTRATO-----------*/
 .containner-contrato {
 
     background-color: #ffffff;
@@ -626,7 +285,7 @@ font-weight: bold;
 }
 
 .content-info>p{
-	padding: 5px;
+        padding: 5px;
 
 }
 
@@ -667,4 +326,87 @@ font-weight: bold;
     font-weight: bold;
 }
 
-/*************************************************************/
+/*------------CONTAIINER CONTRATO----------*/
+/*----------cONTAINNER QR-------------*/
+.Title-qr{
+
+}
+
+.section-qr-1{
+        display: flex;
+        justify-content: space-between;
+}
+
+.section-qr-2 {
+    display: flex;
+    justify-content: center;
+    background: #f3f3f3;
+    padding: 20px;
+}
+.btn-qr-containner {
+    display: flex;
+    justify-content: center;
+    padding: 1px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-descargar-qr {
+    background: #1050FF;
+    color: white;
+    font-weight: bold;
+    padding: 8px;
+    width: 100%;
+    border-style: none;
+    font-size: 15px;
+}
+
+.modal-qr {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content-qr {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.qr_containner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #e5e5e5;
+}
+
+
+.nombre-de-la-empreza {
+    font-size: 37px;
+}
+
+
+.close-qr {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-qr:hover,
+.close-qr:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*----------cONTAINNER QR-------------*/
