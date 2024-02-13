@@ -19,7 +19,7 @@ function Login(){
 
 
 function cammbio_area(){
-	console.log("console")
+	
 	document.getElementById("containner_section1").classList.replace('containner-section1','oculto');
 	document.getElementById("containner_section2").classList.replace('oculto', 'containner-data-form');
 }
@@ -63,9 +63,9 @@ function generarCodigoContrato(){
 }
 
 /****NEW DATA***/
-function New(){
 
-	console.log("New")
+
+function New(){
 
 	let nombre = document.getElementById("nombre").value
 	let apellido = document.getElementById("apellido").value
@@ -81,13 +81,27 @@ function New(){
 	let telefono1 = document.getElementById("telefono1").value
 	let telefono2 = document.getElementById("telefono2").value
 
-
 	/*let imagen = document.getElementById("select_image_get").src*/
 
-	let code=["MiniStockEmprendedor2023=",generarCodigoContrato()];
 
-	var fecha = new Date();
-	var diaTexto = fecha.toLocaleDateString();
+    var fecha = new Date();
+    var diaTexto = fecha.toLocaleDateString();
+	var ano = fecha.getFullYear();
+	
+
+let message ="MiniStockEmprendedor"+ano+"=";
+  const password = "123647859MiniStock";
+
+  // Encriptar mensaje
+  const encryptedMessage = CryptoJS.AES.encrypt(message, password).toString();
+
+  console.log("Mensaje encriptado:", encryptedMessage);
+
+
+	let code=[encryptedMessage,generarCodigoContrato()];
+
+console.log(code)
+
 
 	let info = {
 			code:code,
@@ -121,8 +135,11 @@ function New(){
 		// Simular un clic en el enlace para descargar el archivo
 		link.click();
 
+/*********************************************************/
 
-		Qrcode(code,nombreEmpresa,diaTexto,riff)
+
+
+Qrcode(code,nombreEmpresa,diaTexto,riff)
 
 }
 
@@ -142,15 +159,22 @@ function Qrcode(code,name,date,riff){
 
 		modal_qr.style.display = "block";
 
+/***PARA EL CUADRO DEL QR*****/
 		document.getElementById("nombre_de_la_empresa").innerHTML=name	
 		document.getElementById("fecha_de_la_empresa").innerHTML=date
 		document.getElementById("riff_de_la_empresa").innerHTML=riff
+
+
+
+
 }
 
 
 /*****MODAL***/
 function descargar_qr(){
 
+
+	let nombreEmpresa = document.getElementById("nombreEmpresa").value
 	var fecha = new Date();
 	var diaTexto = fecha.toLocaleDateString();
 
@@ -160,7 +184,7 @@ function descargar_qr(){
 	        var img = canvas.toDataURL("image/png");
 	        var link = document.createElement('a');
 	        link.href = img;
-	        link.download = "Qrcode"+"_"+diaTexto+".png";
+	        link.download = "Qrcode"+"_"+nombreEmpresa+"_"+diaTexto+".png";
 	        link.click();
 	});
 
