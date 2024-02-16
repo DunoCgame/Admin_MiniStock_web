@@ -85,11 +85,11 @@ function New(){
 
 
     var fecha = new Date();
-    var diaTexto = fecha.toLocaleDateString();
+   
 	var ano = fecha.getFullYear();
-	
 
-let message ="MiniStockEmprendedor"+ano+"=";
+
+let message ="MiniStockEmprendedor"+diaTexto+"=";
   const password = "123647859MiniStock";
 
   // Encriptar mensaje

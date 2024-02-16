@@ -30,7 +30,7 @@ input{
 /***BASE******/
 /*-----------CONTAINNER SECTION 1-----------*/
 .containner-section1 {
-    background: #2e374e;
+    background: #202530;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,12 +38,14 @@ input{
     height: 100vh;
 }
 
+
 .image-section1 {
     width: 300px;
     border: 4.5px solid white;
     border-radius: 197px;
     box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0092ff, 0 0 20px #e1d5df, 0 0 25px #0997ef;
     padding: 15px;
+    background: #2e374e;
 }
 
 
