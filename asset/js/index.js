@@ -85,12 +85,12 @@ function New(){
 
 
     var fecha = new Date();
-   
+
 	var ano = fecha.getFullYear();
-var diaTexto = fecha.toLocaleDateString();
-console.log(diaTexto)
-let message ="MiniStockEmprendedor"+diaTexto+"=";
-  const password = "123647859MiniStock";
+	var diaTexto = fecha.toLocaleDateString();
+	console.log(diaTexto)
+	let message ="MiniStockEmprendedor"+diaTexto+"=";
+	const password = "123647859MiniStock";
 
   // Encriptar mensaje
   const encryptedMessage = CryptoJS.AES.encrypt(message, password).toString();
@@ -149,21 +149,21 @@ function Qrcode(code,name,date,riff){
 
 	let qrdata=code;
 
-        var qrcode = new QRCode("qrcodeuno", {
+    var qrcode = new QRCode("qrcodeuno", {
             text: JSON.stringify(qrdata),
             width: 200,
             height: 200,
             colorDark: "black",
             colorLight: "white",
             correctLevel : QRCode.CorrectLevel.H
-        });
+    });
 
-		modal_qr.style.display = "block";
+	modal_qr.style.display = "block";
 
-/***PARA EL CUADRO DEL QR*****/
-		document.getElementById("nombre_de_la_empresa").innerHTML=name	
-		document.getElementById("fecha_de_la_empresa").innerHTML=date
-		document.getElementById("riff_de_la_empresa").innerHTML=riff
+	/***PARA EL CUADRO DEL QR*****/
+	document.getElementById("nombre_de_la_empresa").innerHTML=name	
+	document.getElementById("fecha_de_la_empresa").innerHTML=date
+	document.getElementById("riff_de_la_empresa").innerHTML=riff
 
 
 }
@@ -172,11 +172,9 @@ function Qrcode(code,name,date,riff){
 /*****MODAL***/
 function descargar_qr(){
 
-
 	let nombreEmpresa = document.getElementById("nombreEmpresa").value
 	var fecha = new Date();
 	var diaTexto = fecha.toLocaleDateString();
-
 
 	html2canvas(document.getElementById("qr")).then(function(canvas) {
 	      
@@ -228,7 +226,6 @@ const cerrarcontrato = document.getElementById("cerrarcontrato");
 const imprimircontrato = document.getElementById("imprimircontrato");
 
 
-
 function call_contrato(){
 
 	let nombre = document.getElementById("nombre").value
@@ -268,8 +265,8 @@ function opencontrato(nom,ape,ci,rif,nombreEmpresa){
 function imprimir_contrato(){
 
 
-var fecha = new Date();
-	var diaTexto = fecha.toLocaleDateString();
+		var fecha = new Date();
+			var diaTexto = fecha.toLocaleDateString();
 
 
 			let CONTRATO = document.getElementById("Contrato");
@@ -292,21 +289,6 @@ var fecha = new Date();
     				pdf.save(diaTexto+'.pdf');
 
     			});
-
-			/*****
- html2canvas(document.getElementsByClassName("droppable-area")[0], { useCORS:true}).then(function (canvas){
-        var imgBase64 = canvas.toDataURL();
-        // console.log("imgBase64:", imgBase64);
-        var imgURL = "data:image/" + imgBase64;
-        var triggerDownload = $("<a>").attr("href", imgURL).attr("download", "layout_"+new Date().getTime()+".jpeg").appendTo("body");
-        triggerDownload[0].click();
-        triggerDownload.remove();
-    });
-
-
-			****/
-
-
 }
 
 

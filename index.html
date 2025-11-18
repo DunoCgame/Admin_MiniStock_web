@@ -10,199 +10,218 @@
   
         <title>Admin System MiniStock</title>
 </head>
+<style type="text/css">
+    
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+body{
+ display: flex;
+
+}   
+.containner-main {
+    background: #2e374e;
+    width: 100%;
+}
+.containner {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 80px 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+.containner-qrcodeuno{ grid-area: 1 / 1 / 2 / 2; }
+.containner-btn { grid-area: 2 / 1 / 3 / 2; }
+.texttarea{ grid-area: 3 / 1 / 4 / 2; }
+
+.containner {
+     align-items: center;
+    background: red;
+    height: 99vh;
+}
+.containner-qrcodeuno {
+    grid-area: 1 / 1 / 2 / 2;
+    background: black;
+    height: 100%;
+}
+
+#qrcodeuno {
+    width: 98%;
+    height: 96%;
+    background:linear-gradient(40deg, #2c528b, #d96b6b00);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.texttarea {
+    width: auto;
+    height: 100%;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.containner-btn {
+    grid-area: 2 / 1 / 3 / 2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: blue;
+    height: -webkit-fill-available;
+}
+
+.select_empresa {
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    padding: 3px;
+}
+
+.btnGenerateCode {
+    width: 100%;
+    height: inherit;
+    background: linear-gradient(45deg, #5c8b00, #b12323eb);
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+</style>
 <body class="body">
         <main class="containner-main">
                 <section class="containner-section1" id="containner_section1">
                     <img src="asset/image/Logo-MiniStock.png" class="image-section1" onclick="Login()">
                 </section>
-                <section class="containner-data-form oculto"  id="containner_section2">
-                        <header class="header">
-                                <h1 class="header-title">MiniStock System</h1>
-                        </header>
-                        <form class="form-modal">                       
-                                <div class="containner-data">
-                                                <h2 class="title-form">Datos de la persona</h2>
-                                                <div class="containner-data-info">
-                                                        <label class="containner-label-modal nombre_containner"> 
-                                                          <label for="nombre">Nombre:</label>
-                                                          <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-                                                        </label>
-
-                                                        <label class="containner-label-modal apellido_containner"> 
-                                                          <label for="apellido">Apellido:</label>
-                                                          <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
-                                                        </label>
-
-                                                        <label class="containner-label-modal ci_containner"> 
-                                                          <label for="ci">CI:</label>
-                                                          <input type="text" id="ci" name="ci" placeholder="ci" required>
-                                                        </label>
-
-                                                        <label class="containner-label-modal direccion_containner">
-                                                          <label for="direccion">Dirección:</label>
-                                                          <input type="text" id="direccion" name="direccion" placeholder="Dirección" required>
-                                                        </label>
-
-                                                        <label class="containner-label-modal correo_containner">
-                                                          <label for="correo">Correo electrónico:</label>
-                                                          <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
-                                                        </label>
-
-                                                        <label class="containner-label-modal telefono_containner">
-                                                          <label for="telefono">Teléfono:</label>
-                                                          <input type="tel" id="telefono" name="telefono" placeholder="Telefono" required>
-                                                        </label>
-                                                </div>
-                                </div>  
-                                  <div class="containner-data">
-                                      <h2 class="title-form">Datos de la empresa</h2>
-                                      <div class="containner-data-info">
-                                                        <label class="containner-label-modal nombreEmpresa_containner">
-                                                                 <label for="nombreEmpresa">Nombre de la empresa:</label>
-                                                                <input type="text" id="nombreEmpresa" name="nombreEmpresa" placeholder="Nombre Empresa" required>
-                                                        </label>
-
-                                                        <label class="containner-label-modal rif_containner">
-
-                                                                <label for="rif">RIF:</label>
-                                                                <input type="text" id="rif" name="rif" placeholder ="Rif" required>
-                                                        </label>
-
-                                                        <label class="containner-label-modal direccionEmpresa_containner">
-                                                          <label for="direccionEmpresa">Dirección de la empresa:</label>
-                                                          <input type="text" id="direccionEmpresa" placeholder ="Dirección Empresa" placeholder="direccionEmpresa" required>
-                                                        </label>
-
-                                                        <label class="containner-label-modal correoEmpresa_containner">
-                                                          <label for="correoEmpresa">Correo electrónico de la empresa:</label>
-                                                          <input type="email" id="correoEmpresa" placeholder ="Correo Empresa" placeholder="correoEmpresa" required>
-                                                        </label>
-
-                                                         <label class="containner-label-modal telefono1_containner">
-                                                                <label for="telefono1">Teléfono 1 de la empresa:</label>
-                                                                 <input type="tel" id="telefono1" placeholder ="telefono1" placeholder="telefono1" required>
-                                                        </label>
-
-                                                         <label class="containner-label-modal telefono2_containner">
-                                                                  <label for="telefono2">Teléfono 2 de la empresa:</label>
-                                                                  <input type="tel" id="telefono2" placeholder ="telefono2" placeholder="telefono2" required>
-                                                        </label>                
-                                      </div>
-                                 </div>
-
-                        </form>
-                        <div class="container-btn">
-                                <button class="btn-action save-btn" onclick="New()">Save Data</button>
-                                 <button class="btn-action clear-btn" onclick="Clear_data_new_update()">clear Data</button>
-                                 <button class="btn-action Contrato-btn" onclick="call_contrato()">contract</
-                        </div>
+                <section class="containner-section2 oculto"  id="containner_section2">
+                    <section class="containner">
+                            <div class="containner-qrcodeuno">
+                                <div id="qrcodeuno"></div>
+                            </div>
+                            <div class="containner-btn">
+                                <select class="select_empresa" id="select_empresa">
+                                    <option select>MiniStock</option>
+                                    <option>Advizualizer</option>
+                                </select>
+                                <button class="btnGenerateCode"onclick="GenerateCode()">Generar</button>
+                            </div>
+                            <textarea class="texttarea" id="data-secripter"> </textarea> 
+                    </section>
                 </section>
         </main>
-        <div id="modal_qr" class="modal-qr">
-                <div class="modal-content-qr">
-                        <section  class="section-qr-1">
-                                        <h2 class="Title-qr">Qr code</h2>
-                                        <span id="close_Modal_qr" class="close-qr" onclick="closeModal_qr()">&times;</span>
-                        </section>
-                        <section class="section-qr-2 ">
-
-                                <div class="qr_containner" id="qr">
-                                        <div id="qrcodeuno">
-                                        </div>
-                                        <h2 id="nombre_de_la_empresa" class="nombre-de-la-empreza">Nombre de la Empreza</h2>
-                                        <div>
-                                                <span>Riff:</span>      
-                                                <label id="riff_de_la_empresa" class="riff-de-la-empreza">Nombre de la Empreza</label>
-                                        </div>  
-                                        <h4 id="fecha_de_la_empresa" class="fecha-de-la-empreza">Nombre de la Empreza</h4>
-                                </div>
-
-
-                        </section>
-
-                        <section class="btn-qr-containner">
-                                <button class="btn-descargar-qr" onclick="descargar_qr()">Descargar</button>
-                        </section>
-                </div>
-        </div>
-        <div id="modal_contrato" class="modal-contrato">
-                <div class="containner-contrato" id="Contrato">
-                                
-                                <div class="containner_data">
-
-                                <img class="logo_contrato" src="asset/image/Logo-MiniStock.png">
-                                <label class="containner-date" id="dateinfo"></label>
-                                
-                                </div>
-                                <h1 class="title-contrato">Contrato de Compra</h1>
-                                <p class="text-contrato">
-                                        Yo, <span class="text-nombre-comprador" id="nom_and_ape_comprador">[nombre del comprador]</span>portador de la cédula de identidad <span class="text-id" id="id_contrtante">[######]</span> como representante autorizado de la organización establecimiento o grupo empresarial de <span class="text-nombre-empresa" id="text_nombre_empresa">[nombre] </span>al que pertenece el número de <span class="text-Rif" id="text_Rif">[riff]</span> hago constar que en plenitud de mi facultades realizó la adquisición de software  <span class="text-nombre-app" id="text_nombre_app">[nombre de la aplicación] </span> para se utilizado en función de sus capacidades. Estando sujeto y comprometido a la cancelación del software pagando un total de<span class="text-monto-app" id="precio_app">[monto]</span>
-                                <p>
-
-                                <h2 class="sub-title-contrato">Clausulas</h2>
-
-                                <ul class="list-item-section">
-                                                <li>Garantizar el idóneo funcionamiento de la aplicación para su uso e implementación</li>
-                                                <li>La estatus del software MiniStock esta sujeta a la actualización selectiva del mismo permitiendo al usuario decidir el estatus de la aplicación tomando en consideración los aportes y desaciertos que conllevan limitando a su responsabilidad exclusiva su accionar excluyendo de este al desarrollador o desarrolladores así como asus distribuidores</li>
-                                                <li>La Cancelación del costo de software se realiza en función y de acuerdo a lo establecido.</li>
-                                                <li>Los daños ocasionados a equipos utilizados en la empresa o establecimientos los cuales no están relacionados con la implementación de software cuestión, excluye de responsabilidad a las o los distribuidoras y desarrolladores.</li>
-                                                <li>Se excluye de toda responsabilidad a los desarrolladores o distribuidores por el uso indebido de la aplicación en o los establecimientos.</li>
-                                        </ul>
-
-
-                                        <h3 class="sub2-title-contra">Contratante</h3>
-                                        <section class="content-info">
-                                                <p>Nombre y Apellido:<span class="text-nom-ape-contratante" id="nombreapellido">___________________</span></p>
-                                                <p >CI:<span class="text-data-contratante" id="idcontratante">___________________</span></p>
-                                                <p >Firma:<span class="text-data-firma">___________________</span></p>
-                                        </section>
-                </div>
-                <div class="container-btn-contrato">
-                        <button class="btn-action-contrato" id="cerrarcontrato" onclick="cerrar_contrato()">cerrar </button>
-                        <button class="btn-action-contrato" id="imprimircontrato" onclick="imprimir_contrato()">imprimir</button>
-                </div>  
-        </div>
 </body>
 <script src="asset/js/jspdf.js"></script>
 <script src="asset/js/html5-qrcode.min.js"></script>
 <script src="asset/js/qrcode.js"></script>
 <script src="asset/js/html2canvas.js"></script>
 <script src="asset/js/cryptojs.js"></script>
-<script src="asset/js/index.js"></script>
+<script >
 
 
+function Login(){
+
+    var numero = prompt("Ingrese Contraseña:");
+
+    if(numero==="1596321"){
+            cammbio_area()
+    }
+    else{
+        console.error("error")
+    }
+
+}
+
+
+function cammbio_area(){
+    
+    document.getElementById("containner_section1").classList.replace('containner-section1','oculto');
+    document.getElementById("containner_section2").classList.replace('oculto', 'containner-data-form');
+}
+
+/*---------------------------------------------*/
+
+function GenerateCode(){
+
+    document.getElementById("qrcodeuno").innerHTML=''
+
+    let fecha = new Date();
+    let ano = fecha.getFullYear();
+    let diaTexto = fecha.toLocaleDateString();
+
+    //console.log(document.getElementById("select_empresa").value);
+    let NameApp = document.getElementById("select_empresa").value;
+
+    let message = NameApp+diaTexto+"=";
+    const password = "123647859"+NameApp;
+
+    // Encriptar mensaje
+    const encryptedMessage = CryptoJS.AES.encrypt(message, password).toString();
+
+    console.log("Mensaje encriptado:", encryptedMessage);
+
+    let code=[encryptedMessage,generarCodigoContrato()];
+
+    let qrdata=code;
+
+    var qrcode = new QRCode("qrcodeuno", {
+            text: JSON.stringify(qrdata),
+            width: 200,
+            height: 200,
+            colorDark: "black",
+            colorLight: "white",
+            correctLevel : QRCode.CorrectLevel.H
+    });
+
+
+/*--------------------------------------------*/
+    const bytes = CryptoJS.AES.decrypt(encryptedMessage, password);
+    const decryptedMessage = bytes.toString(CryptoJS.enc.Utf8);
+
+    console.log(decryptedMessage)
+
+document.getElementById("data-secripter").value=decryptedMessage
+
+
+}
+
+
+
+function generarCodigoContrato(){
+
+          const fecha = new Date();
+          
+          // Obtener los componentes de la fecha
+          const año = fecha.getFullYear();
+          const mes = fecha.getMonth() + 1; // Los meses en JavaScript comienzan desde 0
+          const dia = fecha.getDate();
+          
+          // Generar un número aleatorio de 4 dígitos
+          const numeroAleatorio = Math.floor(Math.random() * 10000);
+          
+          // Crear el código de contrato combinando los componentes de la fecha y el número aleatorio
+          const codigoContrato = `${año}${mes}${dia}${numeroAleatorio}`;
+          
+          return codigoContrato;
+}
+
+
+
+function descargar_qr(){
+
+    let nombreEmpresa = document.getElementById("nombreEmpresa").value
+    var fecha = new Date();
+    var diaTexto = fecha.toLocaleDateString();
+
+    html2canvas(document.getElementById("qr")).then(function(canvas) {
+          
+            var img = canvas.toDataURL("image/png");
+            var link = document.createElement('a');
+            link.href = img;
+            link.download = "Qrcode"+"_"+nombreEmpresa+"_"+diaTexto+".png";
+            link.click();
+    });
+
+
+}
+
+</script>
 </html>
-
-<!--
-                <div class="container-imagenes-qr">
-                                <section class="containner-imagen-select-update-new">
-                                        <img src="asset/image/product-default.png" class="imagen-select" id="select_image_get">
-                                        <button class="btn-select-image" onclick="select_image()">select</button>
-                                </section>                              
-                </div>
--->
-
-<!--
-
-<article class="article-client-savend">
-                                <Img class="img-article-client" src="asset/image/product-default.png" alti="images">
-                                <h3 class="article-title-client">${data[i].nombre_empresa}</h3>
-                                <span class="containner-info-code">
-                                        <span>code :</span>
-                                        <span>${data[i].code}</span>
-                                </span>
-                                <div class="containner-button">
-                                <button class="btn-action-article btn-info" onclick="InfoClient(${data[i].id},${data[i].code})">info</button>
-                                <button class="btn-action-article btn-qr " onclick="Qrcode(${data[i].id},${data[i].code})">Qr</button>
-                                <button class="btn-action-article btn-update" onclick="Generate_Element('Update',${data[i].id})">update</button>
-                                <button class="btn-action-article btn-delet" onclick="Delet(${data[i].id},${data[i].code})">Delet</button>
-                                </div>
-                        </article>
-icon-info
-icon-cross
-icon-undo2
-icon-spinner9
-icon-search
-icon-bin
-
--->
