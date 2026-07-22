@@ -66,6 +66,13 @@ body{
     align-items: center;
 }
 
+.sub-container-qr{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+}
+
 #qrcodeuno {
     background: white;
     padding: 5px;
@@ -128,13 +135,17 @@ body{
                     <section class="containner">
                             <div class="containner-qrcodeuno">
                                 <div class="containner-qr">
+                                <div class="sub-container-qr">
                                     <div id="qrcodeuno"></div>
+                                    <label id="nombreApp"></label>  
+                                </div>
                                 </div>
                             </div>
                             <div class="containner-btn">
                                 <select class="select_empresa" id="select_empresa">
                                     <option select>MiniStock</option>
                                     <option>AdVizualyze</option>
+                                    <option>Deudex</option>
                                 </select>
                                 <div class="container-button">
                                         <button class="btnGenerateCode"onclick="GenerateCode()">Generar</button>
@@ -207,11 +218,24 @@ function GenerateCode(){
     /*--------------------------------------------*/
     const bytes = CryptoJS.AES.decrypt(encryptedMessage, password);
     const decryptedMessage = bytes.toString(CryptoJS.enc.Utf8);
-
-    console.log(decryptedMessage)
-
+    document.getElementById("nombreApp").innerHTML= document.getElementById("select_empresa").value
     document.getElementById("data-scripter").value=decryptedMessage
 
+}
+
+
+function Descargar_qr(){
+
+    var fecha = new Date();
+    var diaTexto = fecha.toLocaleDateString();
+
+    html2canvas(document.getElementById("qrcodeuno")).then(function(canvas) {      
+            var img = canvas.toDataURL("image/png");
+            var link = document.createElement('a');
+            link.href = img;
+            link.download = document.getElementById("select_empresa").value+"Qrcode"+"_"+diaTexto+".png";
+            link.click();
+    });
 }
 
 
@@ -233,23 +257,6 @@ function generarCodigoContrato(){
           return codigoContrato;
 }
 
-
-function Descargar_qr(){
-
-    var fecha = new Date();
-    var diaTexto = fecha.toLocaleDateString();
-
-    html2canvas(document.getElementById("qrcodeuno")).then(function(canvas) {
-          
-            var img = canvas.toDataURL("image/png");
-            var link = document.createElement('a');
-            link.href = img;
-            link.download = document.getElementById("select_empresa").value+"Qrcode"+"_"+diaTexto+".png";
-            link.click();
-    });
-
-
-}
 
 </script>
 </html>
